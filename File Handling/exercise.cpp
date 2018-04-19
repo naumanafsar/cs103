@@ -20,7 +20,7 @@ int main() {
     while(!inFile.eof()) {
       inFile.get(ch);
 
-      if(ch >= char(65) && ch <= char(92)) {
+      if(ch >= char(65) && ch <= char(90)) {
         upper += 1;
       }
 
@@ -40,6 +40,7 @@ int main() {
       while (getline(inFile, line)) {
         lines += 1;
     }
+
   inFile.close();
 
   fstream outFile;
