@@ -32,6 +32,10 @@ public:
     if (hr > 12) {
       std::cout << "The Time is: " << hr - 12 << c << min << c << sec << " PM" <<endl;
     }
+
+    else if( sec < 10 || hr < 10 || min < 10) {
+      std::cout << "The Time is: " << "0" << hr << c << "0" << min << c << "0" << sec << "AM" << '\n';
+    }
     else std::cout << "The Time is: " << hr << c << min << c << sec << " AM" <<endl;
 
   }
@@ -45,8 +49,6 @@ public:
       min = m - 59;
       hr += 1;
     }
-
-
   }
 
   void checkTime(int h, int m, int s) {
